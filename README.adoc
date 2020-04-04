@@ -1,0 +1,13 @@
+= Sonatype Nexus Repository Manager for Raspberry-Pi Dockerfile
+
+== BUILD
+
+docker build . -t nexus
+
+== Run with persistence:
+
+docker run -p 8081:8081 -d -v nexus-data:/opt/sonatype/sonatype-work/nexus3 nexus
+
+The start password is generated while installation. It can be echoed with:
+
+cat /opt/sonatype/sonatype-work/nexus3/admin.password && echo
