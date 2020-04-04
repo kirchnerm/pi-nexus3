@@ -4,6 +4,8 @@
 
 docker build . -t nexus
 
+Pulls the latest available Version at build time.
+
 == Run with persistence:
 
 docker run -p 8081:8081 -d -v nexus-data:/opt/sonatype/sonatype-work/nexus3 nexus
